@@ -1,0 +1,9 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Theme.SpisokTest" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">#4c9069</item>
+        <item name="colorPrimaryDark">#3d7254</item>
+        <item name="colorAccent">#4d8f69</item>
+        <item name="android:textColor">#e5000000</item>
+    </style>
+</resources>

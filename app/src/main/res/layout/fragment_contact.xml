@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="contactModel"
+            type="ru.kurant.spisoktest.viewmodel.ContactModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            app:title=" "
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:layout_marginHorizontal="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/contact_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="8dp"
+                android:text="@{contactModel.contactData.name}"
+                android:textSize="30sp"/>
+
+            <TextView
+                android:id="@+id/contact_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="6dp"
+                android:text="@{contactModel.contactData.phone}"
+                android:textSize="20sp"
+                android:textColor="@color/ClickableText"/>
+
+            <TextView
+                android:id="@+id/contact_temperament"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="4dp"
+                android:text="@{String.valueOf(contactModel.contactData.temperament)}"
+                android:textColor="@color/GrayText"/>
+
+            <TextView
+                android:id="@+id/contact_dates"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="4dp"
+                android:text="@{contactModel.contactData.educationPeriod.toString()}"
+                android:textColor="@color/GrayText"/>
+
+            <TextView
+                android:id="@+id/contact_bio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="4dp"
+                android:text="@{contactModel.contactData.biography}" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

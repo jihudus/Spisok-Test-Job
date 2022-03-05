@@ -1,5 +1,6 @@
 package ru.kurant.spisoktest.ui
 
+import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -84,6 +85,8 @@ class ListFragment: Fragment() {
     }
 
     private fun showSnackBar(binding: FragmentListBinding) {
-        Snackbar.make(binding.root, "Нет подключения к сети", LENGTH_LONG).show()
+        Snackbar.make(binding.root, "Нет подключения к сети", LENGTH_LONG)
+            .setTextColor(Color.WHITE)
+            .show()
     }
 }
